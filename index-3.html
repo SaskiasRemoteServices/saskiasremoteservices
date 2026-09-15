@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saskia's Remote Services — Customer support &amp; remote operations</title>
+<meta name="description" content="Saskia's Remote Services — reliable customer support and remote operations for growing businesses. Operated by Saskia Armstrong.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Saskia's Remote Services — Virtual Remote Assistance">
+<meta property="og:description" content="Reliable customer support and remote operations for growing businesses.">
+<meta property="og:image" content="https://saskiasremotesupport.co.uk/favicon.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Saskia's Remote Services — Virtual Remote Assistance">
+<meta name="twitter:description" content="Reliable customer support and remote operations for growing businesses.">
+<meta name="twitter:image" content="https://saskiasremotesupport.co.uk/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+  :root{
+    --cream:#FBF3E6;
+    --cream-dim:#F3E7D2;
+    --ink:#2C3722;
+    --ink-soft:#66704F;
+    --pink:#EFA0B2;
+    --pink-deep:#DE7189;
+    --pink-pale:#FBE3E8;
+    --green:#7C8C55;
+    --green-pale:#E4E9D2;
+    --green-deep:#46572F;
+    --line:#E9D9BE;
+    --card:#FFFFFF;
+    --max:1080px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--cream);
+    color:var(--ink);
+    font-family:'Nunito', sans-serif;
+    font-size:16px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3{
+    font-family:'Yeseva One', serif;
+    font-weight:400;
+    color:var(--ink);
+    margin:0;
+    line-height:1.2;
+  }
+  a{color:inherit;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  section{padding:92px 0;}
+  section + section{border-top:2px dashed var(--line);}
+
+  /* Header */
+  header{
+    position:sticky; top:0; z-index:20;
+    background:rgba(251,243,230,0.94);
+    backdrop-filter:blur(6px);
+    border-bottom:2px dashed var(--line);
+  }
+  .nav{
+    max-width:var(--max); margin:0 auto; padding:14px 28px;
+    display:flex; align-items:center; justify-content:space-between; gap:24px;
+  }
+  .wordmark img{height:46px; display:block;}
+  nav ul{list-style:none; display:flex; gap:6px; margin:0; padding:0;}
+  nav a{
+    text-decoration:none; font-size:15.5px; font-weight:800; color:var(--green-deep);
+    text-transform:uppercase; letter-spacing:0.03em;
+    padding:9px 14px; border-radius:999px; transition:background 0.15s ease;
+  }
+  nav a:hover{background:var(--pink-pale);}
+  .nav-cta{
+    display:inline-block; background:var(--green-deep); color:#fff !important;
+    padding:11px 22px; border-radius:999px; font-size:15px; font-weight:700; text-decoration:none;
+    transition:background 0.15s ease; white-space:nowrap;
+  }
+  .nav-cta:hover{background:var(--pink-deep);}
+
+  /* Hero */
+  .hero{padding:76px 0 84px; position:relative; overflow:hidden;}
+  .hero::before{
+    content:""; position:absolute; top:-120px; right:-120px; width:420px; height:420px;
+    background:radial-gradient(circle, var(--pink-pale) 0%, rgba(251,227,232,0) 70%);
+    z-index:0;
+  }
+  .hero::after{
+    content:""; position:absolute; bottom:-160px; left:-140px; width:440px; height:440px;
+    background:radial-gradient(circle, var(--green-pale) 0%, rgba(228,233,210,0) 70%);
+    z-index:0;
+  }
+  .hero-logo-banner{
+    text-align:center; padding:44px 0 8px; position:relative; z-index:1;
+  }
+  .hero-logo-banner img{max-width:380px; width:60%; height:auto;}
+  .hero .wrap{
+    display:grid; grid-template-columns:1.15fr 0.85fr; gap:56px; align-items:center;
+    position:relative; z-index:1;
+  }
+  .eyebrow{
+    display:inline-block; font-size:14px; color:var(--green-deep); margin-bottom:16px; font-weight:800;
+    background:var(--green-pale); padding:6px 14px; border-radius:999px;
+  }
+  .pillars{
+    display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-top:22px;
+    font-size:13px; font-weight:800; letter-spacing:0.04em; text-transform:uppercase;
+    color:var(--green-deep);
+  }
+  .pillars .dot{width:6px; height:6px; border-radius:50%; background:var(--pink-deep); display:inline-block;}
+  .hero h1{font-size:40px; letter-spacing:-0.01em; max-width:18ch; color:var(--green-deep);}
+  .hero p.lead{
+    margin-top:20px; font-size:17px; color:var(--ink-soft); max-width:52ch;
+  }
+  .hero-ctas{margin-top:32px; display:flex; gap:14px; flex-wrap:wrap;}
+  .btn{
+    display:inline-block; padding:13px 26px; border-radius:999px; text-decoration:none;
+    font-size:15px; font-weight:700; transition:all 0.15s ease; border:2px solid transparent;
+  }
+  .btn-primary{background:var(--green-deep); color:#fff;}
+  .btn-primary:hover{background:var(--pink-deep);}
+  .btn-ghost{border-color:var(--pink-deep); color:var(--pink-deep);}
+  .btn-ghost:hover{background:var(--pink-deep); color:#fff; border-color:var(--pink-deep);}
+
+  .portrait{
+    aspect-ratio:4/5; border-radius:28px; overflow:hidden;
+    display:flex; align-items:center; justify-content:center; position:relative;
+    border:3px solid #fff; box-shadow:0 18px 40px rgba(70,87,47,0.16);
+  }
+  .portrait img.photo{width:100%; height:100%; object-fit:cover; display:block;}
+  .portrait img.thumb-fill{width:100%; height:100%; object-fit:cover; display:block;}
+
+  /* Section headers */
+  .section-head{max-width:56ch; margin-bottom:48px;}
+  .section-head h2{font-size:32px; color:var(--green-deep);}
+  .section-head p{margin-top:14px; color:var(--ink-soft); font-size:16px;}
+
+  /* Services */
+  .services-grid{
+    display:grid; grid-template-columns:1fr 1fr; gap:20px;
+  }
+  .service{
+    background:var(--card); border-radius:20px; padding:30px 30px 26px;
+    border-top:6px solid var(--pink);
+    box-shadow:0 10px 24px rgba(91,106,60,0.06);
+  }
+  .service:nth-child(2n){border-top-color:var(--green);}
+  .service h3{font-size:20px; margin-bottom:10px; font-weight:700;}
+  .service p{margin:0 0 14px; color:var(--ink-soft); font-size:15px;}
+  .service ul{list-style:none; padding:0; margin:0;}
+  .service li{
+    font-size:14.5px; color:var(--ink-soft); padding-left:20px; position:relative; margin-bottom:8px;
+  }
+  .service li::before{
+    content:""; position:absolute; left:0; top:7px; width:8px; height:8px; border-radius:50%;
+    background:var(--pink-deep);
+  }
+  .service:nth-child(2n) li::before{background:var(--green);}
+
+  /* Packages */
+  .packages-grid{
+    display:grid; grid-template-columns:repeat(3, 1fr); gap:22px;
+  }
+  .package{
+    background:var(--card); border-radius:22px; border:2px solid var(--line);
+    padding:32px 26px; display:flex; flex-direction:column; position:relative;
+  }
+  .package.featured{
+    border-color:var(--pink-deep); box-shadow:0 14px 30px rgba(222,113,137,0.18);
+  }
+  .package.featured::before{
+    content:"Most popular"; position:absolute; top:-16px; left:26px;
+    background:var(--pink-deep); color:#fff; font-size:12.5px; font-weight:800;
+    padding:7px 16px; border-radius:10px 10px 10px 0;
+  }
+  .package .tag{
+    font-size:13px; color:var(--green-deep); font-weight:800; margin-bottom:12px;
+  }
+  .package h3{font-size:21px; margin-bottom:6px;}
+  .package .hours{color:var(--ink-soft); font-size:14.5px; margin-bottom:18px;}
+  .package .price{
+    font-family:'Yeseva One', serif; font-weight:400; font-size:32px; margin-bottom:4px;
+    color:var(--green-deep);
+  }
+  .package ul{
+    list-style:none; padding:0; margin:20px 0 26px; flex-grow:1;
+  }
+  .package li{
+    font-size:14.5px; color:var(--ink-soft); padding-left:20px; position:relative; margin-bottom:10px;
+  }
+  .package li::before{
+    content:""; position:absolute; left:0; top:7px; width:8px; height:8px; border-radius:50%;
+    background:var(--pink-deep);
+  }
+  .package .btn{text-align:center;}
+
+  .oneoff{
+    margin-top:26px; border:2px dashed var(--line); border-radius:18px; background:var(--cream-dim);
+    padding:22px 28px; display:flex; align-items:center; justify-content:space-between;
+    gap:20px; flex-wrap:wrap;
+  }
+  .oneoff h4{font-family:'Yeseva One',serif; font-weight:400; font-size:17px; margin:0 0 4px; color:var(--green-deep);}
+  .oneoff p{margin:0; color:var(--ink-soft); font-size:14.5px;}
+  .oneoff .price{font-family:'Yeseva One',serif; font-weight:400; font-size:20px; white-space:nowrap; color:var(--pink-deep);}
+  .oneoff-right{display:flex; align-items:center; gap:20px;}
+
+  /* Testimonials */
+  .testimonial-grid{
+    display:grid; grid-template-columns:repeat(3,1fr); gap:24px;
+  }
+  .testimonial{
+    background:var(--card); padding:26px 24px; position:relative;
+    border-radius:20px 20px 20px 4px;
+    box-shadow:0 10px 22px rgba(91,106,60,0.07);
+  }
+  .testimonial:nth-child(3n+2){background:var(--pink-pale);}
+  .testimonial:nth-child(3n){background:var(--green-pale);}
+  .testimonial p.quote{
+    font-size:15.5px; line-height:1.55; margin:0 0 16px; color:var(--ink); font-weight:600;
+  }
+  .testimonial .attr{font-size:14px; color:var(--green-deep); font-weight:700;}
+  .testimonial .source{font-size:12px; color:var(--ink-soft); margin-top:2px; font-weight:600;}
+
+  /* Contact */
+  .contact-grid{
+    display:grid; grid-template-columns:0.9fr 1.1fr; gap:56px;
+  }
+  .contact-info h2{font-size:32px; margin-bottom:16px; color:var(--green-deep);}
+  .contact-info p{color:var(--ink-soft); font-size:16px; max-width:38ch;}
+  .contact-info .discovery{
+    margin-top:28px; padding:24px; background:linear-gradient(135deg, var(--green-deep), var(--green));
+    border-radius:20px; color:#fff;
+  }
+  .contact-info .discovery h4{font-family:'Yeseva One',serif; font-weight:400; font-size:19px; margin:0 0 8px; color:#fff;}
+  .contact-info .discovery p{color:rgba(255,255,255,0.9); font-size:14.5px; margin:0 0 16px;}
+  .contact-info .discovery a{
+    display:inline-block; background:#fff; color:var(--pink-deep) !important;
+    padding:11px 22px; border-radius:999px; text-decoration:none; font-size:14.5px; font-weight:800;
+  }
+
+  form{display:flex; flex-direction:column; gap:16px;}
+  form label{font-size:13.5px; color:var(--green-deep); margin-bottom:6px; display:block; font-weight:700;}
+  form input, form select, form textarea{
+    width:100%; padding:13px 16px; border:2px solid var(--line); border-radius:14px;
+    background:#fff; font-family:'Nunito',sans-serif; font-size:15px; color:var(--ink);
+  }
+  form input:focus, form select:focus, form textarea:focus{
+    outline:none; border-color:var(--pink-deep);
+  }
+  form textarea{resize:vertical; min-height:110px;}
+  form button{
+    align-self:flex-start; margin-top:6px; border:none; cursor:pointer;
+    background:var(--green-deep); color:#fff; padding:13px 30px; border-radius:999px;
+    font-size:15px; font-weight:800; font-family:'Nunito',sans-serif;
+  }
+  form button:hover{background:var(--pink-deep);}
+
+  footer{
+    padding:44px 0 32px; text-align:center; color:var(--ink-soft); font-size:13.5px;
+  }
+  footer .footer-mark{max-width:340px; width:100%; height:auto; display:block; margin:0 auto 18px;}
+  footer p{margin:0;}
+  footer .footer-links{margin-top:10px;}
+  footer .footer-links a{color:var(--green-deep); text-decoration:none; font-weight:700;}
+
+  @media (max-width: 860px){
+    .hero .wrap{grid-template-columns:1fr;}
+    .portrait{order:-1; max-width:280px; margin:0 auto;}
+    .hero h1{font-size:30px; max-width:none;}
+    .services-grid{grid-template-columns:1fr;}
+    .packages-grid{grid-template-columns:1fr;}
+    .testimonial-grid{grid-template-columns:1fr; gap:20px;}
+    .contact-grid{grid-template-columns:1fr; gap:40px;}
+    nav ul{display:none;}
+    section{padding:60px 0;}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <div class="wordmark"><img src="logo.png" alt="Saskia's Remote Services"></div>
+    <nav>
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <a class="nav-cta" href="https://calendly.com/saskiasremoteservices" target="_blank" rel="noopener">Book a discovery call</a>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="hero-logo-banner">
+    <img src="logo.png" alt="Saskia's Remote Services">
+  </div>
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Virtual remote assistance</div>
+      <h1>Reliable customer support and remote operations for growing businesses.</h1>
+      <p class="lead">I help growing businesses stay organised and deliver a better customer experience by managing customer enquiries, inboxes, bookings, CRM administration and everyday operations. With experience across management, healthcare administration, recruitment and creative communications, I can step into busy environments quickly and bring structure, warmth and reliability.</p>
+      <div class="pillars">
+        <span>Remote support</span><span class="dot"></span><span>Customer care</span><span class="dot"></span><span>Operations</span>
+      </div>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="https://calendly.com/saskiasremoteservices" target="_blank" rel="noopener">Book a free discovery call</a>
+        <a class="btn btn-ghost" href="#packages">See packages</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <!-- Replace with: <img class="photo" src="your-photo.jpg" alt="Saskia Armstrong"> once a photo is ready -->
+      <img class="thumb-fill" src="favicon.png" alt="Saskia's Remote Services">
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">What I do</div>
+      <h2>Four ways I can support your business</h2>
+      <p>Every business's admin load looks different — most clients mix and match from across these areas.</p>
+    </div>
+    <div class="services-grid">
+      <div class="service">
+        <h3>Customer Support</h3>
+        <p>Keeping your customers looked after and heard, across every channel.</p>
+        <ul>
+          <li>Email, chat &amp; social-media enquiries</li>
+          <li>Complaint resolution &amp; follow-up</li>
+          <li>CRM updates, onboarding &amp; feedback</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>Administration &amp; Operations</h3>
+        <p>Keeping the everyday running of your business organised and on schedule.</p>
+        <ul>
+          <li>Diary, bookings &amp; confirmations</li>
+          <li>Inbox organisation &amp; rotas</li>
+          <li>Documents, spreadsheets &amp; reports</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>Recruitment Support</h3>
+        <p>Support through the hiring process, from first advert to first day.</p>
+        <ul>
+          <li>Posting vacancies &amp; screening applicants</li>
+          <li>Interview arranging &amp; candidate communication</li>
+          <li>Recruitment databases &amp; onboarding paperwork</li>
+        </ul>
+      </div>
+      <div class="service">
+        <h3>Creative Support</h3>
+        <p>Practical, on-brand content to keep your business visible.</p>
+        <ul>
+          <li>Canva graphics &amp; social-media scheduling</li>
+          <li>Posters, menus &amp; signs</li>
+          <li>Newsletters &amp; marketing materials</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="packages">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Working together</div>
+      <h2>Simple, flexible packages</h2>
+      <p>Choose a monthly package for ongoing support, or book one-off work for a single project.</p>
+    </div>
+    <div class="packages-grid">
+      <div class="package">
+        <div class="tag">Getting started</div>
+        <h3>Flex Support</h3>
+        <div class="hours">Up to 10 hours a month</div>
+        <div class="price">£300</div>
+        <ul>
+          <li>Ideal for light, ongoing admin</li>
+          <li>Email &amp; diary management</li>
+          <li>Priority email response</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Get started</a>
+      </div>
+      <div class="package featured">
+        <h3>Business Support</h3>
+        <div class="hours">Up to 20 hours a month</div>
+        <div class="price">£575</div>
+        <ul>
+          <li>Everything in Flex Support</li>
+          <li>Client communication cover</li>
+          <li>Regular reporting &amp; admin</li>
+        </ul>
+        <a class="btn btn-primary" href="#contact">Get started</a>
+      </div>
+      <div class="package">
+        <div class="tag">For growing teams</div>
+        <h3>Operations Partner</h3>
+        <div class="hours">Up to 40 hours a month</div>
+        <div class="price">£1,080</div>
+        <ul>
+          <li>Everything in Business Support</li>
+          <li>Invoicing &amp; bookkeeping support</li>
+          <li>Dedicated weekly check-in</li>
+        </ul>
+        <a class="btn btn-ghost" href="#contact">Get started</a>
+      </div>
+    </div>
+    <div class="oneoff">
+      <div>
+        <h4>One-off work</h4>
+        <p>Ad hoc projects, no ongoing commitment.</p>
+      </div>
+      <div class="oneoff-right">
+        <div class="price">£30–£35/hour</div>
+        <a class="btn btn-ghost" href="#contact">Get started</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="testimonials">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Kind words</div>
+      <h2>What people say about working with Saskia</h2>
+    </div>
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p class="quote">So much fun, I loved it — Saskia is the best (and so is everyone who works with her)!</p>
+        <div class="attr">Esme M.</div>
+        <div class="source">Google review · 5/5</div>
+      </div>
+      <div class="testimonial">
+        <p class="quote">Saskia is the nicest person, really willing to help.</p>
+        <div class="attr">Miguel S.</div>
+        <div class="source">Google review · 5/5</div>
+      </div>
+      <div class="testimonial">
+        <p class="quote">Outstanding. Shoutout Saskia!</p>
+        <div class="attr">Trevor K.</div>
+        <div class="source">Google review · 5/5</div>
+      </div>
+      <div class="testimonial">
+        <p class="quote">Really helpful assistance, and such good energy from Saskia!</p>
+        <div class="attr">Paolo L.</div>
+        <div class="source">Google review · 5/5</div>
+      </div>
+      <div class="testimonial">
+        <p class="quote">Saskia is the best.</p>
+        <div class="attr">Ricardo</div>
+        <div class="source">Google review · 5/5</div>
+      </div>
+      <div class="testimonial">
+        <p class="quote">Sas is a legend.</p>
+        <div class="attr">Verified guest, Wales</div>
+        <div class="source">Host review · 10/10</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact-grid">
+    <div class="contact-info">
+      <h2>Let's talk about your business</h2>
+      <p>Send a message with a bit about what you need, or book a free 20-minute discovery call to talk it through.</p>
+      <div class="discovery">
+        <h4>Free discovery call</h4>
+        <p>A no-obligation 20-minute call to see if we're a good fit.</p>
+        <a href="https://calendly.com/saskiasremoteservices" target="_blank" rel="noopener">Book a call</a>
+      </div>
+    </div>
+    <form action="https://formspree.io/f/your-form-id" method="POST">
+      <div>
+        <label for="name">Name</label>
+        <input id="name" name="name" type="text" required>
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" required>
+      </div>
+      <div>
+        <label for="package">What are you interested in?</label>
+        <select id="package" name="package">
+          <option>Flex Support</option>
+          <option>Business Support</option>
+          <option>Operations Partner</option>
+          <option>One-off work</option>
+          <option>Not sure yet</option>
+        </select>
+      </div>
+      <div>
+        <label for="message">Tell me a bit about what you need</label>
+        <textarea id="message" name="message" required></textarea>
+      </div>
+      <button type="submit">Send message</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="wordmark-full.png" alt="Saskia's Remote Services — Virtual Remote Assistance" class="footer-mark">
+    <p>Operated by Saskia Armstrong, sole trader &middot; <a href="mailto:saskiasremoteservices@gmail.com">saskiasremoteservices@gmail.com</a></p>
+    <nav class="footer-links" aria-label="Legal information">
+      <a href="privacy.html">Privacy Notice</a>
+    </nav>
+  </div>
+</footer>
+
+</body>
+</html>
